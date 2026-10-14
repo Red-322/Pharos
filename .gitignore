@@ -1,0 +1,48 @@
+# --- Build output ---
+**/target/
+**/build/
+**/dist/
+**/out/
+
+# --- IDE ---
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+/.agent
+/.claude
+/.shared
+/card-shwocase
+/.qoder
+/.shared
+/video-backgrounds
+/.workbuddy
+/.agents
+/.superpowers
+
+
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Environment ---
+.env
+.env.local
+.env.*.local
+
+# --- Logs ---
+*.log
+**/logs/

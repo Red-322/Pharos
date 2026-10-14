@@ -1,0 +1,516 @@
+[
+  {
+    "id": 1,
+    "question": "双通道为什么合起来用？RRF有什么作用？",
+    "expectedDocumentId": 10,
+    "expectedChunkIndexes": [
+      13
+    ],
+    "difficulty": "EASY",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 2,
+    "question": "项目分成几个模块？各个模块之间怎么依赖的？",
+    "expectedDocumentId": 10,
+    "expectedChunkIndexes": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 3,
+    "question": "后端技术分别选择什么版本？组件的选择及其原因",
+    "expectedDocumentId": 10,
+    "expectedChunkIndexes": [
+      20,
+      21,
+      22,
+      24,
+      25
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 4,
+    "question": "RRF 的 k 为什么是 0？归一化怎么做的？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      10,
+      11
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 5,
+    "question": "证据链怎么分层？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "difficulty": "HARD",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 6,
+    "question": "为什么用 MyBatis 动态 SQL做可见性过滤？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      5,
+      6
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 7,
+    "question": "流式回答下的持久化为什么更复杂？落库怎么解决？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      17,
+      18,
+      19
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 8,
+    "question": "异步结果怎么回传给前端？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      19,
+      20
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 9,
+    "question": "SSE事件中引用什么时候发送？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      20,
+      21
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 10,
+    "question": "ChatModel 和 ChatClient 的区别",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      5,
+      6
+    ],
+    "difficulty": "EASY",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 11,
+    "question": "为什么要用到Agent？普通的RAG问答不行吗？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      8
+    ],
+    "difficulty": "MEDIUM",
+    "note": "原标 [7,8]；切片 7 是 PromptTemplate，与本题无关",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 12,
+    "question": "ReactAgent是怎么进行循环的？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      8,
+      9
+    ],
+    "difficulty": "EASY",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 13,
+    "question": "assistant有哪两种模式？区别在哪？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      9,
+      10
+    ],
+    "difficulty": "EASY",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 14,
+    "question": "项目组ID等工具参数直接传给Agent不会有隐私风险吗？怎么解决这个问题？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      31,
+      32,
+      33
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 15,
+    "question": "Agent循环里会出现因为大模型反复搜索而反复调用工具的情况吗？为什么？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      33,
+      34,
+      35
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 16,
+    "question": "长对话怎么控制上下文长度？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "difficulty": "HARD",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 17,
+    "question": "为什么 System Prompt 从文件加载，而不是硬编码在 Java 里？",
+    "expectedDocumentId": 13,
+    "expectedChunkIndexes": [
+      29,
+      30
+    ],
+    "difficulty": "MEDIUM",
+    "note": "已换知识点（原“配置优先级”答案在代码块里，查不到）",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 18,
+    "question": "ThreadLocal 存用户上下文怎么保证不串",
+    "expectedDocumentId": 13,
+    "expectedChunkIndexes": [
+      33,
+      34
+    ],
+    "difficulty": "MEDIUM",
+    "note": "答案是切片 34 的\"防止线程归还线程池后残留用户信息\"",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 19,
+    "question": "文档处理卡住了怎么办？",
+    "expectedDocumentId": 13,
+    "expectedChunkIndexes": [
+      36,
+      37
+    ],
+    "difficulty": "MEDIUM",
+    "note": "切片 35 只到标题；僵尸文档内容在 36、37",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 20,
+    "question": "怎么判断应用真的起来了",
+    "expectedDocumentId": 13,
+    "expectedChunkIndexes": [
+      40,
+      41
+    ],
+    "difficulty": "MEDIUM",
+    "note": "",
+    "questionType": "关键词型"
+  },
+  {
+    "id": 21,
+    "question": "为什么要同时用两种方式搜索，然后再把两边结果合起来？",
+    "expectedDocumentId": 10,
+    "expectedChunkIndexes": [
+      13
+    ],
+    "difficulty": "EASY",
+    "note": "口语型 · 与 #1 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 22,
+    "question": "这个系统在代码层面是怎么划分的？各部分之间是谁调用谁？",
+    "expectedDocumentId": 10,
+    "expectedChunkIndexes": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #2 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 23,
+    "question": "这个项目都用了哪些工具和框架？分别是什么版本、当时为什么选它？",
+    "expectedDocumentId": 10,
+    "expectedChunkIndexes": [
+      20,
+      21,
+      22,
+      24,
+      25
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #3 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 24,
+    "question": "两边的结果合起来之后，分数是怎么被统一到同一个范围内的？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      10,
+      11
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #4 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 25,
+    "question": "我点开答案下面标的那个来源标记，能看到多少东西？这些信息是一层层加上去的吗？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "difficulty": "HARD",
+    "note": "口语型 · 与 #5 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 26,
+    "question": "查历史问答的时候，是怎么保证我只能看到自己有权限的那些记录的？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      5,
+      6
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #6 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 27,
+    "question": "答案一个字一个字往外蹦的时候，这条问答是什么时候存进数据库的？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      17,
+      18,
+      19
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #7 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 28,
+    "question": "后台异步算完的那个记录编号，是怎么传回到前端响应里的？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      19,
+      20
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #8 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 29,
+    "question": "页面上那些参考来源，是跟着文字一起慢慢出现的，还是最后一次性给的？",
+    "expectedDocumentId": 11,
+    "expectedChunkIndexes": [
+      20,
+      21
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #9 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 30,
+    "question": "在 Spring AI 里，我是怎么把问题发给大模型、再把答案拿回来的？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      5,
+      6
+    ],
+    "difficulty": "EASY",
+    "note": "口语型 · 与 #10 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 31,
+    "question": "直接让大模型回答不就行了，为什么还要绕一圈搞个能自己调工具的助手？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      8
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #11 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 32,
+    "question": "那个助手是怎么一轮一轮地“想一下、做一下、再看结果”的？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      8,
+      9
+    ],
+    "difficulty": "EASY",
+    "note": "口语型 · 与 #12 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 33,
+    "question": "这个助手有两种用法，分别是什么、有什么不一样？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      9,
+      10
+    ],
+    "difficulty": "EASY",
+    "note": "口语型 · 与 #13 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 34,
+    "question": "助手查资料的时候，是怎么知道该去哪个知识库里查的？这个信息会告诉大模型吗？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      31,
+      32,
+      33
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #14 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 35,
+    "question": "同一个问题，大模型会不会搜了一遍又搜一遍？系统有没有拦它？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      33,
+      34,
+      35
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #15 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 36,
+    "question": "聊天聊了很久、消息越堆越多的时候，是怎么处理的？",
+    "expectedDocumentId": 12,
+    "expectedChunkIndexes": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "difficulty": "HARD",
+    "note": "口语型 · 与 #16 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 37,
+    "question": "给大模型的那段固定指令，是写在代码里的还是放在外面的文件里？为什么？",
+    "expectedDocumentId": 13,
+    "expectedChunkIndexes": [
+      29,
+      30
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #17 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 38,
+    "question": "两个人同时发请求，系统怎么保证不会把 A 的身份当成 B 的？",
+    "expectedDocumentId": 13,
+    "expectedChunkIndexes": [
+      33,
+      34
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #18 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 39,
+    "question": "如果服务器突然断电，那些正在解析、还没处理完的文档会怎么样？",
+    "expectedDocumentId": 13,
+    "expectedChunkIndexes": [
+      36,
+      37
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #19 同一知识点（配对对照）",
+    "questionType": "口语型"
+  },
+  {
+    "id": 40,
+    "question": "怎么知道这个服务是真的启动完成了、可以开始用了？",
+    "expectedDocumentId": 13,
+    "expectedChunkIndexes": [
+      40,
+      41
+    ],
+    "difficulty": "MEDIUM",
+    "note": "口语型 · 与 #20 同一知识点（配对对照）",
+    "questionType": "口语型"
+  }
+]
+
+
