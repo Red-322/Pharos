@@ -542,7 +542,7 @@ The project follows **incremental iteration**: each version focuses on a single 
 | **V2.0** | Document Engine | Chunked upload (resume / dedup), ETL pipeline, dual-path retrieval (vector + keyword) |
 | **V3.0** | RAG Q&A | Query planning (LLM), RRF fusion, four-level evidence grading, citation tracing |
 | **V4.0** | AI Agent | ReactAgent graph engine, CHAT / KB_SEARCH modes, three-tier memory, SSE streaming |
-| **V5.0** | **Retrieval Quality** | **Cross-encoder reranking**, **channel routing** (2.25 → 1 vector call per question), **40-question paired evaluation set and parameter sweep** |
+| **V5.0** | Retrieval Quality | Cross-encoder reranking, channel routing (2.25 → 1 vector call per question), 40-question paired evaluation set and parameter sweep |
 
 > V5.0 improvements are backed by measured data: Chunk Top-5 hit rate **82.5–87.5% → 92.5%**, MRR **0.69 → 0.813**.
 > See the [`docs/`](docs/) directory for design documents.
