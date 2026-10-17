@@ -21,8 +21,8 @@
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
-  text
-  
+  text-overflow: ellipsis;
+}
 
 .primary-button:hover:not(:disabled) {
   background: var(--brand-primary-dark);
