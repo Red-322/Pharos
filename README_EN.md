@@ -105,7 +105,7 @@ Each user question first passes through a planning layer that produces `{strateg
 | --- | --- | --- |
 | `DIRECT` | Question is already specific | Search with the original text |
 | `REWRITE` | Question is colloquial | Rewrite into search-friendly phrases |
-| `DECOMPOSE` | Compound question | Split into multiple sub-queries executed in parallel |
+| `DECOMPOSE` | Compound question | Split into multiple sub-queries, retrieved sequentially |
 
 **② Channel routing**
 
