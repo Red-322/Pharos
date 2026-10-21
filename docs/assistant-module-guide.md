@@ -4,7 +4,6 @@
 >
 > 本文档基于项目 `assistant` 模块的实际代码，结合 Spring AI 与 Spring AI Alibaba 最新官方文档编写。
 >
-> 撰写时间：2026 年 5 月
 
 ---
 

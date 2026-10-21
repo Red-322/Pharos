@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1620" height="1010" viewBox="0 0 1620 1010" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#185FA5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#1D9E75" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="#534AB7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<text x="40" y="34" font-size="25" font-weight="600" fill="#141414">Pharos 一次问答完整时序图 · QA 模块（同步问答）</text>
+<text x="40" y="58" font-size="13" fill="#6b6b6b">入口：POST /api/qa/ask ｜ 从上到下 = 时间 ｜ 蓝实线 = 调用，绿虚线 = 返回，紫 = 内部计算 ｜ ★ = 改造落点</text>
+<text x="40" y="78" font-size="12.5" fill="#A32D2D">⚠ 这是 qa 模块的链路。assistant 模块（Agent / KB_SEARCH 模式）是另一条独立入口，见「时序图-Agent链路.png」</text>
+
+<rect x="40" y="94" width="140" height="50" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="110" y="119" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">用户</text>
+<path d="M110 144 L110 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<rect x="195" y="94" width="140" height="50" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="265" y="119" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">QaController</text>
+<path d="M265 144 L265 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<rect x="350" y="94" width="140" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+<text x="420" y="119" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">QaService</text>
+<path d="M420 144 L420 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<rect x="505" y="94" width="140" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+<text x="575" y="119" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">QaChatService</text>
+<path d="M575 144 L575 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<rect x="660" y="94" width="140" height="50" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+<text x="730" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">ReadyChunk</text>
+<text x="730" y="129" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">DocumentRetriever</text>
+<path d="M730 144 L730 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<rect x="815" y="94" width="140" height="50" rx="8" fill="#FBEAF0" stroke="#993556" stroke-width="1.8"/>
+<text x="885" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#72243E">HybridChunk</text>
+<text x="885" y="129" text-anchor="middle" font-size="12" font-weight="600" fill="#72243E">RetrievalService</text>
+<path d="M885 144 L885 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<rect x="970" y="94" width="140" height="50" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5"/>
+<text x="1040" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#633806">QueryPlanning</text>
+<text x="1040" y="129" text-anchor="middle" font-size="12" font-weight="600" fill="#633806">Service</text>
+<path d="M1040 144 L1040 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<rect x="1125" y="94" width="140" height="50" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+<text x="1195" y="119" text-anchor="middle" font-size="12.5" font-weight="600" fill="#3C3489">向量库 / ES</text>
+<path d="M1195 144 L1195 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<rect x="1280" y="94" width="140" height="50" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+<text x="1350" y="119" text-anchor="middle" font-size="13" font-weight="600" fill="#3C3489">大模型</text>
+<path d="M1350 144 L1350 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<rect x="1435" y="94" width="140" height="50" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.5"/>
+<text x="1505" y="119" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2C2C2A">PostgreSQL</text>
+<path d="M1505 144 L1505 985" stroke="#C9C7BE" stroke-width="1" stroke-dasharray="5 5" fill="none"/>
+
+<text x="187" y="176" text-anchor="middle" font-size="12.5" fill="#185FA5">提问</text>
+<path d="M112 187 L258 187" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+
+<text x="343" y="203" text-anchor="middle" font-size="12.5" fill="#185FA5">ask()</text>
+<path d="M267 214 L413 214" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+
+<text x="470" y="231" font-size="11.5" fill="#0F6E56">校验群组读权限</text>
+<path d="M420 242 L448 242 L448 253 L428 253" stroke="#0F6E56" stroke-width="1.4" fill="none" marker-end="url(#a2)"/>
+
+<text x="497" y="269" text-anchor="middle" font-size="12.5" fill="#185FA5">askWithUsage()</text>
+<path d="M422 280 L568 280" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+
+<text x="652" y="296" text-anchor="middle" font-size="12.5" fill="#185FA5">retrieveEvidence()　</text>
+<path d="M577 307 L723 307" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+
+<text x="807" y="323" text-anchor="middle" font-size="12.5" fill="#185FA5">retrieve(topK=5)</text>
+<path d="M732 334 L878 334" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+
+<text x="962" y="350" text-anchor="middle" font-size="12.5" fill="#185FA5">plan(question)</text>
+<path d="M887 361 L1033 361" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+
+<text x="1117" y="377" text-anchor="middle" font-size="12.5" fill="#185FA5">规划提示词</text>
+<path d="M1042 388 L1343 388" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+
+<text x="1117" y="406" text-anchor="middle" font-size="12.5" fill="#1D9E75">{ strategy, queries }</text>
+<path d="M1348 417 L1047 417" stroke="#1D9E75" stroke-width="1.3" stroke-dasharray="6 4" fill="none" marker-end="url(#a2)"/>
+
+<text x="962" y="435" text-anchor="middle" font-size="12.5" fill="#1D9E75">QueryPlanResult</text>
+<path d="M1038 446 L892 446" stroke="#1D9E75" stroke-width="1.3" stroke-dasharray="6 4" fill="none" marker-end="url(#a2)"/>
+
+<rect x="862" y="458" width="560" height="70" rx="7" fill="#FAEEDA" stroke="#854F0B" stroke-width="1" stroke-dasharray="5 4" opacity="0.55"/>
+<text x="872" y="476" font-size="12" font-weight="600" fill="#633806">loop 每个 plannedQuery（顺序执行，不是并行）</text>
+
+<text x="1040" y="500" text-anchor="middle" font-size="12.5" fill="#185FA5">search(topK=50) 向量 + 关键词</text>
+<path d="M887 511 L1188 511" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+
+<text x="1040" y="527" text-anchor="middle" font-size="12.5" fill="#1D9E75">hits</text>
+<path d="M1193 522 L892 522" stroke="#1D9E75" stroke-width="1.3" stroke-dasharray="6 4" fill="none" marker-end="url(#a2)"/>
+
+<text x="912" y="553" font-size="11.5" fill="#534AB7">RRF 按 chunkId 累加</text>
+<path d="M885 564 L913 564 L913 574 L893 574" stroke="#534AB7" stroke-width="1.4" fill="none" marker-end="url(#a3)"/>
+
+<text x="912" y="593" font-size="11.5" fill="#534AB7">归一化 1 - e^(-x)</text>
+<path d="M885 604 L913 604 L913 614 L893 614" stroke="#534AB7" stroke-width="1.4" fill="none" marker-end="url(#a3)"/>
+
+<text x="912" y="629" font-size="11.5" font-weight="600" fill="#D85A30">★ Rerank 插入点 → 取 Top5</text>
+<path d="M885 640 L913 640 L913 650 L893 650" stroke="#534AB7" stroke-width="1.4" fill="none" marker-end="url(#a3)"/>
+
+<text x="912" y="669" font-size="11.5" fill="#534AB7">聚类 → 邻居窗口扩展</text>
+<path d="M885 680 L913 680 L913 690 L893 690" stroke="#534AB7" stroke-width="1.4" fill="none" marker-end="url(#a3)"/>
+
+<text x="912" y="709" font-size="11.5" fill="#534AB7">证据分级 NONE / WEAK / PARTIAL / SUFFICIENT</text>
+<path d="M885 720 L913 720 L913 730 L893 730" stroke="#534AB7" stroke-width="1.4" fill="none" marker-end="url(#a3)"/>
+
+<text x="807" y="749" text-anchor="middle" font-size="12.5" fill="#1D9E75">返回证据束</text>
+<path d="M883 760 L737 760" stroke="#1D9E75" stroke-width="1.3" stroke-dasharray="6 4" fill="none" marker-end="url(#a2)"/>
+
+<text x="652" y="777" text-anchor="middle" font-size="12.5" fill="#1D9E75">bundle</text>
+<path d="M728 788 L582 788" stroke="#1D9E75" stroke-width="1.3" stroke-dasharray="6 4" fill="none" marker-end="url(#a2)"/>
+
+<rect x="352" y="800" width="1150" height="112" rx="7" fill="#FBEAF0" stroke="#993556" stroke-width="1" stroke-dasharray="5 4" opacity="0.5"/>
+<text x="362" y="818" font-size="12" font-weight="600" fill="#72243E">alt</text>
+<text x="1190" y="818" font-size="12" fill="#72243E">证据为空 → 代码硬分支直接拒答（不调模型）</text>
+
+<text x="885" y="840" text-anchor="middle" font-size="12.5" fill="#185FA5">有证据：提示词 + 证据片段 + 等级指引</text>
+<path d="M577 851 L1343 851" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+
+<text x="885" y="869" text-anchor="middle" font-size="12.5" fill="#1D9E75">答案（token 可流式返回）</text>
+<path d="M1348 880 L582 880" stroke="#1D9E75" stroke-width="1.3" stroke-dasharray="6 4" fill="none" marker-end="url(#a2)"/>
+
+<text x="607" y="902" font-size="11.5" fill="#0F6E56">CitationAssembler 按文件名去重，组装引用</text>
+<path d="M575 913 L603 913 L603 923 L583 923" stroke="#0F6E56" stroke-width="1.4" fill="none" marker-end="url(#a2)"/>
+
+<text x="497" y="948" text-anchor="middle" font-size="12.5" fill="#1D9E75">AskResult</text>
+<path d="M573 959 L427 959" stroke="#1D9E75" stroke-width="1.3" stroke-dasharray="6 4" fill="none" marker-end="url(#a2)"/>
+
+<text x="962" y="978" text-anchor="middle" font-size="12.5" fill="#185FA5">落库：问答记录 + LLM 成本（经 QaRecordPersistenceService）</text>
+<path d="M422 989 L1498 989" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+</svg>

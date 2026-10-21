@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="936" viewBox="0 0 1540 936">
+<rect width="1540" height="936" fill="#ffffff"/>
+<text x="34" y="30" font-size="25" font-weight="600" fill="#141414">Pharos 系统架构图</text>
+<text x="34" y="54" font-size="13" fill="#6b6b6b">RAG 知识库 + ReAct Agent ｜ 依赖方向：从上到下单向 ｜ ★ 标记 = 我的改造落点</text>
+<rect x="34" y="76.0" width="1472" height="158.0" rx="14" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text x="48" y="100.0" font-size="15" font-weight="600" fill="#0C447C">入口层 · Controller</text>
+<rect x="212.2" y="88.0" width="45.2" height="17" rx="9" fill="none" stroke="#85B7EB" stroke-width="1"/>
+<text x="234.8" y="100.5" font-size="11" fill="#85B7EB" text-anchor="middle">14 个</text>
+<rect x="48.0" y="116.0" width="159.2" height="96.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="58.0" y="132.0" font-size="12" font-weight="600" fill="#333">身份与账号</text>
+<line x1="58.0" y1="138.0" x2="197.2" y2="138.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="58.0" y="155.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AuthController</text>
+<text x="58.0" y="172.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AccountController</text>
+<text x="58.0" y="189.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AdminUserController</text>
+<text x="58.0" y="206.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AdminMetricsController</text>
+<rect x="216.2" y="116.0" width="133.9" height="45.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="226.2" y="132.0" font-size="12" font-weight="600" fill="#333">文档</text>
+<line x1="226.2" y1="138.0" x2="340.0" y2="138.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="226.2" y="155.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentController</text>
+<rect x="359.0" y="116.0" width="197.1" height="96.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="369.0" y="132.0" font-size="12" font-weight="600" fill="#333">知识库组</text>
+<line x1="369.0" y1="138.0" x2="546.1" y2="138.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="369.0" y="155.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>GroupManagementController</text>
+<text x="369.0" y="172.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>GroupQueryController</text>
+<text x="369.0" y="189.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>GroupJoinRequestController</text>
+<text x="369.0" y="206.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>InvitationDecisionController</text>
+<rect x="565.1" y="116.0" width="133.9" height="62.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="575.1" y="132.0" font-size="12" font-weight="600" fill="#333">问答（QA 模块）</text>
+<line x1="575.1" y1="138.0" x2="689.0" y2="138.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="575.1" y="155.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>QaController</text>
+<text x="575.1" y="172.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>QaRecordController</text>
+<rect x="708.0" y="116.0" width="216.1" height="79.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="718.0" y="132.0" font-size="12" font-weight="600" fill="#333">助手（assistant 模块 · Agent）</text>
+<line x1="718.0" y1="138.0" x2="914.0" y2="138.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="718.0" y="155.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantChatController</text>
+<text x="718.0" y="172.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantConversationController</text>
+<text x="718.0" y="189.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantSessionController</text>
+<line x1="48" y1="208.0" x2="1492" y2="208.0" stroke="#e0c9a0" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="48" y="223.0" font-size="11.5" fill="#8a4b1f">两条问答入口互相独立：QaController 走 QA 模块；AssistantChatController 走 Agent（KB_SEARCH 模式）</text>
+<rect x="34" y="247.0" width="1472" height="226.0" rx="14" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+<text x="48" y="271.0" font-size="15" font-weight="600" fill="#085041">业务服务层 · Service</text>
+<rect x="217.5" y="259.0" width="226.6" height="17" rx="9" fill="none" stroke="#5DCAA5" stroke-width="1"/>
+<text x="330.8" y="271.5" font-size="11" fill="#5DCAA5" text-anchor="middle">@Service 共 38 个，下列为主要业务服务</text>
+<rect x="48.0" y="287.0" width="152.8" height="96.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="58.0" y="303.0" font-size="12" font-weight="600" fill="#333">身份认证</text>
+<line x1="58.0" y1="309.0" x2="190.8" y2="309.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="58.0" y="326.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AuthService</text>
+<text x="58.0" y="343.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>JwtAccessTokenService</text>
+<text x="58.0" y="360.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>RefreshTokenService</text>
+<text x="58.0" y="377.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>CurrentUserService</text>
+<rect x="209.8" y="287.0" width="203.4" height="164.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="219.8" y="303.0" font-size="12" font-weight="600" fill="#333">文档入库</text>
+<line x1="219.8" y1="309.0" x2="403.2" y2="309.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="219.8" y="326.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentUploadService</text>
+<text x="219.8" y="343.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentIngestionAsyncService</text>
+<text x="219.8" y="360.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>ChunkService</text>
+<text x="219.8" y="377.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>VectorIngestionService</text>
+<text x="219.8" y="394.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentQueryService</text>
+<text x="219.8" y="411.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentDeleteService</text>
+<text x="219.8" y="428.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentDownloadService</text>
+<text x="219.8" y="445.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentPreviewService</text>
+<rect x="422.2" y="287.0" width="184.4" height="113.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="432.2" y="303.0" font-size="12" font-weight="600" fill="#333">问答</text>
+<line x1="432.2" y1="309.0" x2="596.7" y2="309.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="432.2" y="326.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>QaService</text>
+<text x="432.2" y="343.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>QaChatService</text>
+<text x="432.2" y="360.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>QueryPlanningService</text>
+<text x="432.2" y="377.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>QaRecordPersistenceService</text>
+<text x="432.2" y="394.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>QaRecordQueryService</text>
+<rect x="615.7" y="287.0" width="285.6" height="130.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="625.7" y="303.0" font-size="12" font-weight="600" fill="#333">助手 · 会话与记忆</text>
+<line x1="625.7" y1="309.0" x2="891.3" y2="309.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="625.7" y="326.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantService</text>
+<text x="625.7" y="343.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantConversationService</text>
+<text x="625.7" y="360.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantSessionService</text>
+<text x="625.7" y="377.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantSessionSummaryService</text>
+<text x="625.7" y="394.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantMemorySummarizer</text>
+<text x="625.7" y="411.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantShortTermMemoryMaintenanceService</text>
+<rect x="910.3" y="287.0" width="197.1" height="96.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="920.3" y="303.0" font-size="12" font-weight="600" fill="#333">助手 · Agent 运行时</text>
+<line x1="920.3" y1="309.0" x2="1097.4" y2="309.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="920.3" y="326.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantAgentFacade</text>
+<text x="920.3" y="343.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantReactAgentFactory</text>
+<text x="920.3" y="360.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantKnowledgeBaseTool</text>
+<text x="920.3" y="377.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantShortTermMemoryHook</text>
+<rect x="1116.4" y="287.0" width="165.5" height="79.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="1126.4" y="303.0" font-size="12" font-weight="600" fill="#333">知识库组</text>
+<line x1="1126.4" y1="309.0" x2="1271.9" y2="309.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="1126.4" y="326.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>GroupManagementService</text>
+<text x="1126.4" y="343.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>GroupMembershipService</text>
+<text x="1126.4" y="360.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>GroupJoinRequestService</text>
+<rect x="1290.9" y="287.0" width="178.1" height="113.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="1300.9" y="303.0" font-size="12" font-weight="600" fill="#333">用户与用量</text>
+<line x1="1300.9" y1="309.0" x2="1459.0" y2="309.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="1300.9" y="326.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AccountService</text>
+<text x="1300.9" y="343.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AdminUserService</text>
+<text x="1300.9" y="360.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>UserQueryService</text>
+<text x="1300.9" y="377.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>LlmUsageCollectorImpl</text>
+<text x="1300.9" y="394.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>LlmUsageStatisticsService</text>
+<line x1="48" y1="447.0" x2="1492" y2="447.0" stroke="#e0c9a0" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="48" y="462.0" font-size="11.5" fill="#8a4b1f">★ 模块边界：QaRetrievalService 是 qa 模块对外的检索门面 —— assistant 模块不直接依赖 qa 的内部类</text>
+<rect x="34" y="486.0" width="1472" height="226.0" rx="14" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5"/>
+<text x="48" y="510.0" font-size="15" font-weight="600" fill="#633806">检索与数据层</text>
+<rect x="150.0" y="498.0" width="149.6" height="17" rx="9" fill="none" stroke="#EF9F27" stroke-width="1"/>
+<text x="224.8" y="510.5" font-size="11" fill="#EF9F27" text-anchor="middle">检索底座 + 15 个 Mapper</text>
+<rect x="48.0" y="526.0" width="209.7" height="96.0" rx="9" fill="#fff" stroke="#993556" stroke-width="1"/>
+<text x="58.0" y="542.0" font-size="12" font-weight="600" fill="#72243E">★ 混合检索底座（核心）</text>
+<line x1="58.0" y1="548.0" x2="247.7" y2="548.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="58.0" y="565.0" font-size="11.5" fill="#4B1528" font-family='Consolas,"Courier New",monospace' font-weight="600">HybridChunkRetrievalService</text>
+<text x="58.0" y="582.0" font-size="11.5" fill="#4B1528" font-family='Consolas,"Courier New",monospace' font-weight="600">ReadyChunkDocumentRetriever</text>
+<text x="58.0" y="599.0" font-size="11.5" fill="#4B1528" font-family='Consolas,"Courier New",monospace' font-weight="600">PgVectorRetrievalAdapter</text>
+<text x="58.0" y="616.0" font-size="11.5" fill="#4B1528" font-family='Consolas,"Courier New",monospace' font-weight="600">ElasticsearchChunkIndexService</text>
+<rect x="266.7" y="526.0" width="178.1" height="79.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="276.7" y="542.0" font-size="12" font-weight="600" fill="#333">答案与引用组装</text>
+<line x1="276.7" y1="548.0" x2="434.9" y2="548.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="276.7" y="565.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>CitationAssembler</text>
+<text x="276.7" y="582.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>EvidenceOverviewAssembler</text>
+<text x="276.7" y="599.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>QaAnswerParser</text>
+<rect x="453.9" y="526.0" width="209.7" height="62.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="463.9" y="542.0" font-size="12" font-weight="600" fill="#333">切片与解析</text>
+<line x1="463.9" y1="548.0" x2="653.6" y2="548.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="463.9" y="565.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>StructureAwareChunkTransformer</text>
+<text x="463.9" y="582.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentParserFactory</text>
+<rect x="672.6" y="526.0" width="203.4" height="164.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="682.6" y="542.0" font-size="12" font-weight="600" fill="#333">数据访问 Mapper（15）</text>
+<line x1="682.6" y1="548.0" x2="866.0" y2="548.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="682.6" y="565.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentMapper</text>
+<text x="682.6" y="582.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>DocumentChunkMapper</text>
+<text x="682.6" y="599.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>UserMapper</text>
+<text x="682.6" y="616.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantMessageMapper</text>
+<text x="682.6" y="633.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>AssistantSessionContextMapper</text>
+<text x="682.6" y="650.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>QaRecordMapper</text>
+<text x="682.6" y="667.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>GroupMembershipMapper</text>
+<text x="682.6" y="684.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>…共 15 个</text>
+<line x1="48" y1="686.0" x2="1492" y2="686.0" stroke="#e0c9a0" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="48" y="701.0" font-size="11.5" fill="#8a4b1f">★ 改造点 ①②④ 全部落在这里：HybridChunkRetrievalService.retrieve() —— QA 问答与 Agent 工具共用同一个底座</text>
+<rect x="34" y="725.0" width="1472" height="102.0" rx="14" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+<text x="48" y="749.0" font-size="15" font-weight="600" fill="#3C3489">外部组件与中间件</text>
+<rect x="180.0" y="737.0" width="60.0" height="17" rx="9" fill="none" stroke="#AFA9EC" stroke-width="1"/>
+<text x="210.0" y="749.5" font-size="11" fill="#AFA9EC" text-anchor="middle">基础设施</text>
+<rect x="48.0" y="765.0" width="158.6" height="45.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="58.0" y="781.0" font-size="12" font-weight="600" fill="#333">PostgreSQL + pgvector</text>
+<line x1="58.0" y1="787.0" x2="196.6" y2="787.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="58.0" y="804.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>业务表 + 向量检索</text>
+<rect x="215.6" y="765.0" width="169.4" height="45.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="225.6" y="781.0" font-size="12" font-weight="600" fill="#333">Elasticsearch + IK 分词</text>
+<line x1="225.6" y1="787.0" x2="375.0" y2="787.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="225.6" y="804.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>关键词检索</text>
+<rect x="394.0" y="765.0" width="146.5" height="62.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="404.0" y="781.0" font-size="12" font-weight="600" fill="#333">MinIO</text>
+<line x1="404.0" y1="787.0" x2="530.5" y2="787.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="404.0" y="804.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>MinioStorageService</text>
+<text x="404.0" y="821.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>ObjectStorageService</text>
+<rect x="549.5" y="765.0" width="122.0" height="62.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="559.5" y="781.0" font-size="12" font-weight="600" fill="#333">阿里云 DashScope</text>
+<line x1="559.5" y1="787.0" x2="661.5" y2="787.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="559.5" y="804.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>对话模型(Qwen)</text>
+<text x="559.5" y="821.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>Embedding 向量化</text>
+<rect x="680.5" y="765.0" width="140.2" height="62.0" rx="9" fill="#fff" stroke="#d8d6cd" stroke-width="1"/>
+<text x="690.5" y="781.0" font-size="12" font-weight="600" fill="#333">You.com 联网检索</text>
+<line x1="690.5" y1="787.0" x2="810.7" y2="787.0" stroke="#dcdcdc" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="690.5" y="804.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>YoucomSearchService</text>
+<text x="690.5" y="821.0" font-size="11.5" fill="#1f1f1f" font-family='Consolas,"Courier New",monospace'>默认关闭</text>
+<rect x="34.0" y="840.0" width="730.0" height="76" rx="11" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.5"/>
+<text x="47.0" y="864.0" font-size="13" font-weight="600" fill="#2C2C2A">横切：每个请求都经过</text>
+<text x="47.0" y="885.0" font-size="11.5" fill="#444441">JwtAuthenticationFilter（认证） → LogAop（耗时日志） → 业务服务；</text>
+<text x="47.0" y="902.0" font-size="11.5" fill="#444441">知识库相关操作还要过 GroupMembershipService.requireGroupReadable()（权限）</text>
+<rect x="776.0" y="840.0" width="730.0" height="76" rx="11" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1.5"/>
+<text x="789.0" y="864.0" font-size="13" font-weight="600" fill="#2C2C2A">说明</text>
+<text x="789.0" y="885.0" font-size="11.5" fill="#444441">未画入：Configuration 类、启动任务、枚举与响应体 —— 它们不是"系统部件"。QuestionQueryRewriteService 全项目零引用，故不在此图。</text>
+</svg>
